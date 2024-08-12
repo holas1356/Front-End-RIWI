@@ -115,7 +115,7 @@ h2 {
   width: 30px;
   height: 30px;
   border: none;
-  background-color: #e0e0e0;
+  background-color: #bbb;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -124,10 +124,9 @@ h2 {
 }
 
 .connection-button.connected {
-  background-color: #1e88e5;
+  background-color: #673ab7;
   color: #fff;
 }
-
 .connection-button i {
   font-size: 14px;
 }
