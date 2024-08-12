@@ -45,7 +45,7 @@ const toggleConnection = () => {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    background: linear-gradient(to bottom, #a54fa1 30%, #fff 70%);
+    background: linear-gradient(to bottom, #a83ea8bc 60%, #fff 10%);
  
   }
 
@@ -57,28 +57,27 @@ const toggleConnection = () => {
 
 
   .profile-picture img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     margin-right: 20px;
     object-fit: cover;
-    margin-top: 40px;
+    margin-top: 135px;
     border: 3px solid white;
   }
   
   .profile-info {
     display: flex;
     flex-direction: column;
-    margin-top: auto;
+    margin-top: 200px;
   }
   
   .profile-info h1 {
-    margin-left: 10px;
     margin-bottom: 10px;
     color: #515050;
-  }
+  } 
   .profile-detail{
     display: flex;
-    gap: 250px;
+    gap: 200px;
   }
   
   .profile-detail ul {
@@ -87,12 +86,14 @@ const toggleConnection = () => {
     margin: 0;
     display: flex;
     gap: 20px;
+    align-items: center;
   }
   
   .profile-info li {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+    
   }
   
 
