@@ -7,6 +7,7 @@
         <div class="card-photo">
           <img :src="connection.photo" alt="Connection Photo" />
         </div>
+        <div class="card-name">{{ connection.name }}</div>
         <div class="card-role">{{ connection.role }}</div>
         <div class="card-tags">
           <span
@@ -53,6 +54,7 @@
   
   interface Connection {
     photo: string;
+    name:string;
     role: string;
     tags: string[];
     projects: number;
@@ -69,10 +71,17 @@
   'Sketch': { color: '#F7B500', background: 'rgba(247, 181, 0, 0.2)' },
   'UI/UX': { color: '#FF61F6', background: 'rgba(255, 97, 246, 0.2)' },
   };
+
+import con1 from '../../assets/images/con1.jpg'
+import con2 from '../../assets/images/con2.jpg'
+import con3 from '../../assets/images/con3.jpg'
+import con4 from '../../assets/images/con4.jpg'
+import con5 from '../../assets/images/con5.jpg'
   
   const connections = ref<Connection[]>([
     {
-    photo: 'path/to/photo1.jpg',
+    photo: con4,
+    name:'Mark Gilbert',
     role: 'UI Designer',
     tags: ['Figma', 'Sketch'],
     projects: 18,
@@ -81,7 +90,38 @@
     isConnected: true
   },
   {
-    photo: 'path/to/photo2.jpg',
+    photo: con2,
+    name:'Eugenia Parsons',
+    role: 'Developer',
+    tags: ['React', 'Angular'],
+    projects: 25,
+    tasks: 912,
+    connections: 234,
+    isConnected: false
+  },
+  {
+    photo: con5,
+    name:'Francis Byrd',
+    role: 'Developer',
+    tags: ['Figma', 'UI/UX'],
+    projects: 30,
+    tasks: 1020,
+    connections: 187,
+    isConnected: true
+  },
+  {
+    photo: con4,
+    name:'Mark Gilbert',
+    role: 'UI Designer',
+    tags: ['Figma', 'Sketch'],
+    projects: 18,
+    tasks: 834,
+    connections: 129,
+    isConnected: true
+  },
+  {
+    photo: con2,
+    name:'Eugenia Parsons',
     role: 'Full Stack Developer',
     tags: ['React', 'Angular'],
     projects: 25,
@@ -90,7 +130,37 @@
     isConnected: false
   },
   {
-    photo: 'path/to/photo3.jpg',
+    photo: con5,
+    name:'Francis Byrd',
+    role: 'Designer',
+    tags: ['Figma', 'UI/UX'],
+    projects: 30,
+    tasks: 1020,
+    connections: 187,
+    isConnected: true
+  }, {
+    photo: con4,
+    name:'Mark Gilbert',
+    role: 'UI Designer',
+    tags: ['Figma', 'Sketch'],
+    projects: 18,
+    tasks: 834,
+    connections: 129,
+    isConnected: true
+  },
+  {
+    photo: con2,
+    name:'Eugenia Parsons',
+    role: 'Full Stack Developer',
+    tags: ['React', 'Angular'],
+    projects: 25,
+    tasks: 912,
+    connections: 234,
+    isConnected: false
+  },
+  {
+    photo: con5,
+    name:'Francis Byrd',
     role: 'Designer',
     tags: ['Figma', 'UI/UX'],
     projects: 30,
@@ -135,24 +205,30 @@
   }
   
   .card-photo img {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto;
+    margin-left: 120px;
+  }
+  .card-name{
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(111, 108, 108);
   }
   
   .card-role {
     text-align: center;
-    font-weight: bold;
-    margin: 10px 0;
+    font-size: 12px;
+    margin-bottom: 10px;
+
   }
   
   .card-tags {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 10px;
     padding: 10px;
   }
   
@@ -160,34 +236,37 @@
     background-color: #eee;
     border-radius: 5px;
     padding: 2px 6px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
   }
   
   .card-stats {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 10px 0;
+    gap: 25px;
   }
   
   .stat {
     text-align: center;
+    margin-top: 10px;
   }
   
   .number {
-    font-weight: bold;
+    color: rgb(111, 108, 108);
+    font-size: 12px;
   }
   
   .label {
     font-size: 12px;
-    color: gray;
   }
   
   .card-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px;
+    gap: 10px;
   }
   
   .connection-btn {
